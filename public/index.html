@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phantom</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="menu">
+  <h1>PHANTOM</h1>
+
+  <input id="name" placeholder="name" />
+
+  <button onclick="create()">Create</button>
+
+  <input id="room" placeholder="code" />
+  <button onclick="join()">Join</button>
+</div>
+
+<div id="lobby" class="hidden">
+  <h2 id="code"></h2>
+  <div id="players"></div>
+  <button onclick="start()">Start</button>
+</div>
+
+<div id="game" class="hidden">
+
+  <div id="timer">0</div>
+
+  <div class="card" id="card">
+    <div class="inner">
+      <div class="front">PHANTOM</div>
+      <div class="back" id="role"></div>
+    </div>
+  </div>
+
+  <div id="chat"></div>
+  <input id="msg" />
+  <button onclick="send()">Send</button>
+
+  <div id="vote"></div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="client.js"></script>
+</body>
+</html>
